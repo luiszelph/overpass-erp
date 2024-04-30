@@ -1,16 +1,16 @@
 export const navbarData = [
     {
-        routeLink: 'dashboard',
+        routerLink: 'dashboard',
         icon: 'fa fa-home',
         label: 'Dashboard'
-    },
-    {
-        routeLink: 'ingresos',
+    }
+    ,{
+        routerLink: 'ingresos',
         icon: 'fa fa-money-bill',
         label: 'Ingreos'
-    },
-    {
-        routeLink: 'egresos',
+    }
+    ,{
+        routerLink: 'egresos',
         icon: 'fa fa-file-invoice',
         label: 'Egresos'
     }
