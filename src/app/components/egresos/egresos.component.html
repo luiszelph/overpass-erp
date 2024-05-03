@@ -1,12 +1,17 @@
 <div class="container">
+  <h1 class="card-title mb-2">Egresos</h1>
   <div class="card">
     <div class="card-header">
       <h5 class="card-title">Menú</h5>
     </div>
     <div class="card-body">
       <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-primary me-2" type="button"><i class="fa fa-list"></i> Lista</button>
-        <button class="btn btn-primary me-2" type="button"><i class="fa fa-file"></i> Nuevo</button>
+        <button class="btn btn-primary me-2" type="button" [routerLink]="['/lista-egresos']">
+          <i class="fa fa-list"></i> Lista
+        </button>        
+        <button class="btn btn-primary me-2" type="button" [routerLink]="['/nuevo-egresos']">
+          <i class="fa fa-file"></i> Nuevo
+        </button>
       </div>
     </div>
   </div>

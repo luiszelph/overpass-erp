@@ -9,6 +9,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IngresosComponent } from './components/ingresos/ingresos.component';
 import { EgresosComponent } from './components/egresos/egresos.component';
+import { ListaIngresosComponent } from './components/ingresos/lista-ingresos/lista-ingresos.component';
+import { NuevoIngresoComponent } from './components/ingresos/nuevo-ingreso/nuevo-ingreso.component';
+import { ListaEgresosComponent } from './components/egresos/lista-egresos/lista-egresos.component';
+import { NuevoEgresosComponent } from './components/egresos/nuevo-egresos/nuevo-egresos.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,7 @@ import { EgresosComponent } from './components/egresos/egresos.component';
     ,BodyComponent
     ,DashboardComponent
     ,IngresosComponent
-    ,EgresosComponent
+    ,EgresosComponent, ListaIngresosComponent, NuevoIngresoComponent, ListaEgresosComponent, NuevoEgresosComponent
   ]
   ,imports: [
      BrowserModule
