@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ingresos } from '../ejemplos-ingresos';
 
 @Component({
   selector: 'app-nuevo-ingreso',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./nuevo-ingreso.component.scss']
 })
 export class NuevoIngresoComponent {
-
+  ingresos = ingresos;
 }
