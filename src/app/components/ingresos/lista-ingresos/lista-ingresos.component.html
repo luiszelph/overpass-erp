@@ -1,19 +1,20 @@
-<div class="container d-flex justify-content-end">
-  <div class="row">
-    <div class="col-md-2 p-2">
-      <button class="btn btn-primary me-2" type="button" [routerLink]="['/ingresos']">
-        Regresar
-      </button>
-    </div>
+<div class="row">
+  <div class="col-md-2 p-2">
+    <button class="btn btn-primary me-2" type="button" [routerLink]="['/ingresos']">
+      Menú
+    </button>
+    <button class="btn btn-primary me-2" type="button" [routerLink]="['/nuevo-ingresos']">
+      Nuevo
+    </button>
   </div>
-</div>
+</div>  
 
 <div class="p-2">
 <table class="table">
   <thead>
     <tr>
       <th scope="col">Número</th>
-      <th scope="col">Factura</th>
+      <th scope="col">Ticket</th>
       <th scope="col">Total</th>
       <th scope="col">Empresa</th>
       <th scope="col">Comentario</th>
@@ -22,7 +23,12 @@
   <tbody>
     <tr *ngFor="let ingreso of ingresos">
       <td>{{ ingreso.id }}</td>
-      <td>{{ ingreso.ticket }}</td>
+      <td>
+        <a [routerLink]="['/ticket', ingreso.id]">
+          {{ ingreso.ticket }}
+        </a>
+      <!-- </td>
+      <td>{{ ingreso.ticket }}</td> -->
       <td>{{ ingreso.total }}</td>
       <td>{{ ingreso.cliente }}</td>
       <td>{{ ingreso.comentario }}</td>

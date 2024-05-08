@@ -1,26 +1,29 @@
 <div class="row">
   <div class="col-md-2 p-2">
     <button class="btn btn-primary me-2" type="button" [routerLink]="['/ingresos']">
-      Regresar
+      Menú
+    </button>
+    <button class="btn btn-primary me-2" type="button" [routerLink]="['/lista-ingresos']">
+      Lista
     </button>
   </div>
 </div>
 <form>
   <div class="form-group row">
     <div class="col-sm-3">
-      <label class="col-sm-2 col-form-label">Ticket</label>
-      <input type="number" class="form-control" id="Ticket" placeholder="Ticket" name="ticket">
+      <label for="ticket" class="col-sm-2 col-form-label">Ticket</label>
+      <input type="text" class="form-control" id="ticket" placeholder="Ticket" name="ticket" ngModel>
     </div>
     <div class="col-sm-3">
-      <label class="col-sm-2 col-form-label">Total</label>
+      <label for="total" class="col-sm-2 col-form-label">Total</label>
       <input type="number" class="form-control" id="total" placeholder="Total" name="total">
     </div>
     <div class="col-sm-3">
-      <label class="col-sm-2 col-form-label">Cliente</label>
+      <label for="cliente" class="col-sm-2 col-form-label">Cliente</label>
       <input type="text" class="form-control" id="cliente" placeholder="Cliente" name="cliente">
     </div>
     <div class="col-sm-3">
-      <label class="col-sm-2 col-form-label">Comentario</label>
+      <label for="comentario" class="col-sm-2 col-form-label">Comentario</label>
       <input type="text" class="form-control" id="comentario" placeholder="Comentario" name="comentario">
     </div>
   </div>
