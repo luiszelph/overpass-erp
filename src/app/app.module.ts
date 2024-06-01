@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BodyComponent } from './components/body/body.component';
@@ -13,6 +12,7 @@ import { ListaIngresosComponent } from './components/ingresos/lista-ingresos/lis
 import { NuevoIngresoComponent } from './components/ingresos/nuevo-ingreso/nuevo-ingreso.component';
 import { ListaEgresosComponent } from './components/egresos/lista-egresos/lista-egresos.component';
 import { NuevoEgresosComponent } from './components/egresos/nuevo-egresos/nuevo-egresos.component';
+import { NgbModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,10 @@ import { NuevoEgresosComponent } from './components/egresos/nuevo-egresos/nuevo-
   ]
   ,imports: [
      BrowserModule
-    ,BrowserAnimationsModule
     ,AppRoutingModule
+    ,BrowserAnimationsModule
+    ,NgbModule
+    ,NgbDatepickerModule 
   ]
   ,providers: []
   ,bootstrap: [AppComponent]

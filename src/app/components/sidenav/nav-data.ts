@@ -9,21 +9,16 @@ export const navbarData: INavbarData[] = [
     ,{
         routerLink: 'ingresos',
         icon: 'fa fa-money-bill',
-        label: 'Ingreos',
-        items: [
-            {
-                routerLink: 'ingresos/lista-ingresos',
-                label: 'Lista Ingreos'
-            },
-            { 
-                routerLink: 'ingresos/nuevo-ingresos',
-                label: 'Nuevo Ingreos'
-            }
-        ]
+        label: 'Ingresos'
     }
     ,{
         routerLink: 'egresos',
         icon: 'fa fa-file-invoice',
         label: 'Egresos'
+    }
+    ,{
+        routerLink: 'catalogos',
+        icon: 'fa fa-folder',
+        label: 'Catalogos'
     }
 ];
