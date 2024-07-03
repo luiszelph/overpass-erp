@@ -13,6 +13,7 @@ import { NuevoIngresoComponent } from './components/ingresos/nuevo-ingreso/nuevo
 import { ListaEgresosComponent } from './components/egresos/lista-egresos/lista-egresos.component';
 import { NuevoEgresosComponent } from './components/egresos/nuevo-egresos/nuevo-egresos.component';
 import { NgbModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NgbModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
     ,AppRoutingModule
     ,BrowserAnimationsModule
     ,NgbModule
-    ,NgbDatepickerModule 
+    ,NgbDatepickerModule
+    ,HttpClientModule
   ]
   ,providers: []
   ,bootstrap: [AppComponent]
