@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { TablaIngreso } from '../Models/Ingresos/TablaIngreso';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,10 @@ export class ApiService {
   private apiUrl = 'http://localhost:5272/'; // Cambia esto a tu URL de la API
 
   constructor(private http: HttpClient) { }
+
+  getTablaIngresos(): Observable<TablaIngreso[]> {
+    return this.http.get<TablaIngreso[]>(this.apiUrl + 'api/Ingresos/Lista');
+  }
 
   getItems(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/items`);

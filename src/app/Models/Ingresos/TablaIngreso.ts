@@ -2,15 +2,15 @@ export class TablaIngreso {
     constructor (
         public ingresoId: number,
         public ticket: string,
-        public Total: string,
-        public ClienteId: number,
-        public FechaRegistro: Date,
-        public FechaTicket: Date,
-        public FechaUltimaModificación: Date,
-        public CreadoPorEmpleadoId: number,
-        public UltimaModificacionPorEmpleadoId: number,
-        public Uso: number,
-        public UsoDescripcion: string,
-        public Comentario?: string
+        public total: string,
+        public clienteId: number,
+        public fechaRegistro: Date,
+        public fechaTicket: Date,
+        public fechaUltimaModificación: Date,
+        public creadoPorEmpleadoId: number,
+        public ultimaModificacionPorEmpleadoId: number,
+        public uso: number,
+        public usoDescripcion: string,
+        public comentario?: string
     ) {}
 }

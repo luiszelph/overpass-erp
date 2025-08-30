@@ -18,26 +18,22 @@
       <th scope="col">Total</th>
       <th scope="col">F. del Ticket</th>
       <th scope="col">F. de registro</th>
-      <th scope="col">Empresa</th>
       <th scope="col">Comentario</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let ingreso of ingresos">
-      <td>{{ ingreso.id }}</td>
+    <tr *ngFor="let ingreso of tablaIngresos; let i = index">
+      <td>{{ i + 1 }}</td>
       <td>
-        <a [routerLink]="['/ticket', ingreso.id]">
+        <a [routerLink]="['/ticket', ingreso.ingresoId]">
           {{ ingreso.ticket }}
         </a>
-      <!-- </td>
-      <td>{{ ingreso.ticket }}</td> -->
+      </td>
       <td>{{ ingreso.total }}</td>
-      <td>{{ ingreso.fechaTicket }}</td>
-      <td>{{ ingreso.fechaRegistro }}</td>
-      <td>{{ ingreso.cliente }}</td>
+      <td>{{ ingreso.fechaTicket | date:'dd-MM-yyyy HH:mm' }}</td>
+      <td>{{ ingreso.fechaRegistro | date:'dd-MM-yyyy HH:mm' }}</td>
       <td>{{ ingreso.comentario }}</td>
     </tr>
   </tbody>
 </table>
-
 </div>
