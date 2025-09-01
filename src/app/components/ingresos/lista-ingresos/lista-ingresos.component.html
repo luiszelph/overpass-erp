@@ -10,30 +10,30 @@
 </div>  
 
 <div class="p-2">
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Número</th>
-      <th scope="col">Ticket</th>
-      <th scope="col">Total</th>
-      <th scope="col">F. del Ticket</th>
-      <th scope="col">F. de registro</th>
-      <th scope="col">Comentario</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let ingreso of tablaIngresos; let i = index">
-      <td>{{ i + 1 }}</td>
-      <td>
-        <a [routerLink]="['/ticket', ingreso.ingresoId]">
-          {{ ingreso.ticket }}
-        </a>
-      </td>
-      <td>{{ ingreso.total }}</td>
-      <td>{{ ingreso.fechaTicket | date:'dd-MM-yyyy HH:mm' }}</td>
-      <td>{{ ingreso.fechaRegistro | date:'dd-MM-yyyy HH:mm' }}</td>
-      <td>{{ ingreso.comentario }}</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Número</th>
+        <th scope="col">Ticket</th>
+        <th scope="col">Total</th>
+        <th scope="col">F. del Ticket</th>
+        <th scope="col">F. de registro</th>
+        <th scope="col">Comentario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ingreso of tablaIngresos; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>
+          <a [routerLink]="['/ticket', ingreso.ingresoId]">
+            {{ ingreso.ticket }}
+          </a>
+        </td>
+        <td>{{ ingreso.total }}</td>
+        <td>{{ ingreso.fechaTicket | date:'dd-MM-yyyy HH:mm' }}</td>
+        <td>{{ ingreso.fechaRegistro | date:'dd-MM-yyyy HH:mm' }}</td>
+        <td>{{ ingreso.comentario }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

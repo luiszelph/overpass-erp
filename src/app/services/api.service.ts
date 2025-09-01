@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TablaIngreso } from '../Models/Ingresos/TablaIngreso';
+import { TablaEgreso } from '../Models/Egresos/TablaEgreso';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,11 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getTablaIngresos(): Observable<TablaIngreso[]> {
-    return this.http.get<TablaIngreso[]>(this.apiUrl + 'api/Ingresos/Lista');
+    return this.http.get<TablaIngreso[]>(this.apiUrl + 'api/Ingresos/ListaIngresos');
+  }
+  
+  getTablaEgresos(): Observable<TablaEgreso[]> {
+    return this.http.get<TablaEgreso[]>(this.apiUrl + 'api/Egresos/ListaEgresos');
   }
 
   getItems(): Observable<any[]> {

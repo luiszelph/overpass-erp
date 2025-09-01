@@ -8,39 +8,32 @@
     </button>
   </div>
 </div>
+
 <div class="p-2">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Número</th>
-            <th scope="col">Factura</th>
-            <th scope="col">Total</th>
-            <th scope="col">Proveedor</th>
-            <th scope="col">Comentario</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>FA-001</td>
-            <td>$100</td>
-            <td>Empresa A</td>
-            <td>Comentario 1</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>FA-002</td>
-            <td>$200</td>
-            <td>Empresa B</td>
-            <td>Comentario 2</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>FA-003</td>
-            <td>$150</td>
-            <td>Empresa C</td>
-            <td>Comentario 3</td>
-          </tr>
-        </tbody>
-      </table>    
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Número</th>
+        <th scope="col">Factura</th>
+        <th scope="col">Total</th>
+        <th scope="col">F. Ticket</th>
+        <th scope="col">F. Registro</th>
+        <th scope="col">Comentarios</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let egreso of tablaEgresos; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>
+          <a [routerLink]="['/factura', egreso.egresoId]">
+            {{ egreso.factura }}
+          </a>
+        </td>
+        <td>{{ egreso.total }}</td>
+        <td>{{ egreso.fechaTicket | date:'dd-MM-yyyy HH:mm' }}</td>
+        <td>{{ egreso.fechaRegistro | date:'dd-MM-yyyy HH:mm' }}</td>
+        <td>{{ egreso.comentario }}</td>
+      </tr>
+    </tbody>
+  </table>  
 </div>
